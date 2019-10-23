@@ -17,9 +17,14 @@ public class Program {
 		Vendedor vendedor = vd.findById(3);
 		System.out.println(vendedor);
 		
-		System.out.println("/n========= Teste 2 Vendedor FindByDepartamento ==========");
+		System.out.println("\n========= Teste 2 Vendedor FindByDepartamento ==========");
 		Departamento departamento = new Departamento(2, null);
 		List<Vendedor> list = vd.findByDepartamento(departamento);
+		for (Vendedor obj : list) {
+			System.out.println(obj);
+		}
+		System.out.println("\n========= Teste 2 Vendedor FindAll ==========");
+		list = vd.findAll();
 		for (Vendedor obj : list) {
 			System.out.println(obj);
 		}
